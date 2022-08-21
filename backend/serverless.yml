@@ -127,7 +127,7 @@ functions:
     events:
       - http:
           method: patch
-          path: todos/{todoId}/update
+          path: todos/update-{todoId}
           cors: true
           authorizer: Auth
           request:
@@ -232,6 +232,15 @@ resources:
     RequestBodyValidator:
       Type: AWS::ApiGateway::RequestValidator
       Properties:
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        ValidateRequestBody: true
+        ValidateRequestParameters: false
+
+    onlyBody:
+      Type: AWS::ApiGateway::RequestValidator
+      Properties:
+        Name: 'only-body'
         RestApiId:
           Ref: ApiGatewayRestApi
         ValidateRequestBody: true
