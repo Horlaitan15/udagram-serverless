@@ -95,7 +95,7 @@ functions:
     events:
       - http:
           method: post
-          path: todos/create
+          path: todos
           cors: true
           authorizer: Auth
           documentation:
@@ -121,7 +121,7 @@ functions:
     events:
       - http:
           method: patch
-          path: todos/{todoId}/update
+          path: todos/{todoId}
           cors: true
           authorizer: Auth
           documentation:
@@ -149,7 +149,7 @@ functions:
     events:
       - http:
           method: delete
-          path: todos/{todoId}/delete
+          path: todos/{todoId}
           cors: true
           authorizer: Auth
     iamRoleStatementsName: ${self:provider.environment.PROJECT_NAME}-delete-todo-role-${self:provider.stage}
