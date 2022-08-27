@@ -61,9 +61,6 @@ custom:
           #   done:
           #     type: boolean
 
-logs:
-    restApi: true
-
 
 functions:
   Auth:
