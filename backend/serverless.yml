@@ -15,6 +15,7 @@ provider:
   region: ${opt:region, 'us-east-1'}
   profile: serverless
 
+  # Tracing
   tracing:
     lambda: true
     apiGateway: true
@@ -35,31 +36,31 @@ custom:
     models:
       - name: CreateTodoRequest
         contentType: "application/json"
-        schema: ${file(models/create-todo-model.json)}
-          # required:
-          #   - name
-          #   - dueDate
-          # properties:
-          #   name:
-          #     minLength: 1
-          #     type: string
-          #   dueDate:
-          #     type: string
+        schema:
+          required:
+            - name
+            - dueDate
+          properties:
+            name:
+              minLength: 1
+              type: string
+            dueDate:
+              type: string
       - name: UpdateTodoRequest
         contentType: "application/json"
-        schema: ${file(models/update-todo-model.json)}
-          # required:
-          #   - name
-          #   - dueDate
-          #   - done
-          # properties:
-          #   name:
-          #     minLength: 1
-          #     type: string
-          #   dueDate:
-          #     type: string
-          #   done:
-          #     type: boolean
+        schema:
+          required:
+            - name
+            - dueDate
+            - done
+          properties:
+            name:
+              minLength: 1
+              type: string
+            dueDate:
+              type: string
+            done:
+              type: boolean
 
 
 functions:

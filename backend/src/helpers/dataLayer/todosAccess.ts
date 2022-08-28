@@ -1,8 +1,8 @@
 import * as AWS from "aws-sdk";
 import { DocumentClient } from "aws-sdk/clients/dynamodb";
 import { Types } from 'aws-sdk/clients/s3';
-import { TodoItem } from "../models/TodoItem";
-import { TodoUpdate } from "../models/TodoUpdate";
+import { TodoItem } from "../../models/TodoItem";
+import { TodoUpdate } from "../../models/TodoUpdate";
 
 
 export class ToDoAccess {

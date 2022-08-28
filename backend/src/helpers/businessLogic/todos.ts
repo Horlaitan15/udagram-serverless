@@ -1,9 +1,9 @@
-import {TodoItem} from "../models/TodoItem";
-import {parseUserId} from "../auth/utils";
-import {CreateTodoRequest} from "../requests/CreateTodoRequest";
-import {UpdateTodoRequest} from "../requests/UpdateTodoRequest";
-import {TodoUpdate} from "../models/TodoUpdate";
-import {ToDoAccess} from "./todosAccess";
+import {TodoItem} from "../../models/TodoItem";
+import {parseUserId} from "../../auth/utils";
+import {CreateTodoRequest} from "../../requests/CreateTodoRequest";
+import {UpdateTodoRequest} from "../../requests/UpdateTodoRequest";
+import {TodoUpdate} from "../../models/TodoUpdate";
+import {ToDoAccess} from "../dataLayer/todosAccess";
 
 const uuidv3 = require('uuid/v4');
 const toDoAccess = new ToDoAccess();
